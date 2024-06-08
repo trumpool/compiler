@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "make -j10",
+        },
+        {
+            "label": "make clean",
+            "type": "shell",
+            "command": "make clean",
+        },
+        {
+            "label": "test4",
+            "type": "shell",
+            "command": "python3 ./test.py ./compiler lab4",
+            "dependsOn": "make"
+        },
+        {
+            "label": "test3",
+            "type": "shell",
+            "command": "python3 ./test.py ./compiler lab3",
+            "dependsOn": "make"
+        },
+        {
+            "label": "test1",
+            "type": "shell",
+            "command": "python3 ./test.py ./compiler lab1",
+            "dependsOn": "make"
+        },
+        {
+            "label": "test2",
+            "type": "shell",
+            "command": "python3 ./test.py ./compiler lab2",
+            "dependsOn": "make"
+        },
+    ]
+}
